@@ -82,3 +82,18 @@ void SinusoidalWaveRealTime::updateWavePoints() {
 void SinusoidalWaveRealTime::sleepOneSec() {
 	QThread::sleep(1);
 }
+
+SinusoidalWaveRealTime& SinusoidalWaveRealTime::operator=(const SinusoidalWaveRealTime& other)
+{
+	if (this != &other) {  // Avoid self-assignment
+		// Copy attributes from the other instance
+		frequency = other.frequency;
+		amplitude = other.amplitude;
+		iWidth = other.iWidth;
+		iHeight = other.iHeight;
+		step = other.step;
+		offset = other.offset;
+		points = other.points;
+	}
+	return *this;
+}

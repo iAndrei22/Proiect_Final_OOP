@@ -37,4 +37,6 @@ public:
 
 	// Sleep for one second (used for animation delay)
 	void sleepOneSec();
+
+	SinusoidalWaveRealTime& operator=(const SinusoidalWaveRealTime& other);
 };

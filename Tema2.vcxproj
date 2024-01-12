@@ -22,6 +22,7 @@
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.22000.0</WindowsTargetPlatformVersion>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <ProjectName>OOP</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -38,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
     <QtInstall>6.4.3_msvc2019_64</QtInstall>
-    <QtModules>core;widgets</QtModules>
+    <QtModules>core;widgets;charts;datavisualization;designer</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
@@ -90,10 +91,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SinusoidalWaveFactory.cpp" />
     <ClCompile Include="SinusoidalWaveRealTime.cpp" />
+    <ClCompile Include="WaveGUI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SinusoidalWaveFactory.h" />
     <ClInclude Include="SinusoidalWaveRealTime.h" />
+    <QtMoc Include="WaveGUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseWaveException.h" />

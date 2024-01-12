@@ -29,6 +29,12 @@
     <ClCompile Include="SinusoidalWaveRealTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SinusoidalWaveFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WaveGUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseWaveException.h">
@@ -43,8 +49,16 @@
     <ClInclude Include="WaveException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SinusoidalWaveFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SinusoidalWaveRealTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WaveGUI.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>
